@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:id="@+id/action_bar"
+    android:clickable="true" >
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pressed_to"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/stat_notify" />
+
+    <com.zhntd.nick.rocklite.views.HeroTextView
+        android:id="@+id/textView1"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/local"
+        android:layout_toRightOf="@+id/app_icon"
+        android:background="@drawable/pressed_to"
+        android:clickable="true"
+        android:gravity="center|left"
+        android:text="ROCKLITE"
+        android:textColor="@color/gray_light"
+        android:textSize="@dimen/font_size_actionbar" />
+
+    <ImageView
+        android:id="@+id/local"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/favour"
+        android:background="@drawable/seleted"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/actionbar_music" />
+
+    <ImageView
+        android:id="@+id/favour"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/more"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/desk2_btn_love_prs" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/pressed_to"
+        android:clickable="true"
+        android:padding="8dp"
+        android:src="@drawable/actionbar_more" />
+
+</RelativeLayout>

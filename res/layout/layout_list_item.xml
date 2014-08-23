@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/art"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_launcher" />
+
+        <com.zhntd.nick.rocklite.views.RobotoLightTextView
+            android:id="@+id/line_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/art"
+            android:layout_alignLeft="@+id/line_one"
+            android:layout_marginBottom="5dp"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/gray_light"
+            android:textSize="11sp" />
+
+        <com.zhntd.nick.rocklite.views.RobotoLightTextView
+            android:id="@+id/line_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/art"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/art"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="@color/gray_light"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

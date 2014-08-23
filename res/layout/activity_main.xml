@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".RockLite"
+    tools:ignore="MergeRootFrame" >
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout1"
+        android:background="@android:color/transparent"
+        tools:context="com.zhntd.nick.rocklite.RockLite" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/relativeLayout1"
+            android:background="@android:color/transparent" >
+        </android.support.v4.view.ViewPager>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+
+        <fragment
+            android:id="@+id/navigation_drawer"
+            android:name="com.zhntd.nick.rocklite.fragment.MenuDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/transparent" >
+
+        <ImageView
+            android:id="@+id/iv_art_bottom"
+            android:layout_width="58.0dip"
+            android:layout_height="58.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:padding="1dp"
+            android:src="@drawable/default_artist" />
+
+        <ImageButton
+            android:id="@+id/btn_play_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btn_next_local"
+            android:layout_toLeftOf="@+id/btn_next_local"
+            android:background="@drawable/pressed_to"
+            android:padding="8dp"
+            android:src="@drawable/notification_play" />
+
+        <ImageButton
+            android:id="@+id/btn_next_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_praised"
+            android:background="@drawable/pressed_to"
+            android:padding="8dp"
+            android:src="@drawable/notification_next" />
+
+        <ImageButton
+            android:id="@+id/btn_pre_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_play_local"
+            android:background="@drawable/pressed_to"
+            android:padding="8dp"
+            android:src="@drawable/notification_pre" />
+
+        <ImageButton
+            android:id="@+id/btn_praised"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/pressed_to"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/desk2_btn_love_prs" />
+
+        <com.zhntd.nick.rocklite.views.RobotoLightTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/btn_pre_local"
+            android:layout_toRightOf="@+id/iv_art_bottom"
+            android:singleLine="true"
+            android:text="Rock Lite"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/gray_light" />
+    </RelativeLayout>
+
+</RelativeLayout>
